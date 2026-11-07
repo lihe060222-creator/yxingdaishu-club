@@ -196,7 +196,7 @@ async function handleAuthSubmit(e) {
 
 function fillAdminDemo() {
   document.getElementById('auth-email').value = 'admin@yxingdaishu.org';
-  document.getElementById('auth-password').value = 'Admin@2026!Algebra';
+  document.getElementById('auth-password').value = 'lh660680';
   openAuthModal('login');
   showToast('已填入管理员凭证：admin@yxingdaishu.org，点击登录即可！', 'info');
 }

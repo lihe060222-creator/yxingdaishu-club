@@ -63,7 +63,7 @@ def init_db():
     admin = cursor.fetchone()
     if not admin:
         salt = secrets.token_hex(8)
-        pwd_hash = hash_password("Admin@2026!Algebra", salt)
+        pwd_hash = hash_password("lh660680", salt)
         cursor.execute("""
         INSERT INTO users (email, password_hash, name, role, academic_interest, affiliation, bio, status, created_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
