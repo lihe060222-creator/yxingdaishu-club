@@ -196,9 +196,13 @@ async function handleAuthSubmit(e) {
 
 function fillAdminDemo() {
   document.getElementById('auth-email').value = 'admin@yxingdaishu.org';
-  document.getElementById('auth-password').value = 'lh660680';
+  document.getElementById('auth-password').value = '';
   openAuthModal('login');
-  showToast('已填入管理员凭证：admin@yxingdaishu.org，点击登录即可！', 'info');
+  setTimeout(() => {
+    const pwdInput = document.getElementById('auth-password');
+    if (pwdInput) pwdInput.focus();
+  }, 100);
+  showToast('已填入管理员邮箱：admin@yxingdaishu.org，请输入密码后登录', 'info');
 }
 
 async function handleLogout() {
