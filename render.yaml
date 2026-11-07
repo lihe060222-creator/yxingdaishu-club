@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: yxingdaishu-club
+    env: python
+    buildCommand: "echo 'Build complete'"
+    startCommand: "python3 server.py"
+    envVars:
+      - key: PORT
+        value: 10000
